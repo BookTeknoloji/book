@@ -1,0 +1,2743 @@
+@import url("../cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600|Space+Mono:400,700");
+
+/* The following line is used to measure usage of this code in production. For more info see our usage billing page */
+@import url("../px.animaapp.com/6236e68442a31b3d71f337d0.6255adc206c7c237d8565678.Mhi3rFb.hch.png");
+
+body {
+  direction: rtl;
+}
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --background: #2b2b2b;
+  --background---secondary: #3b3b3b;
+  --black: #000000;
+  --call-to-action: #a259ff;
+  --caption--label-text: #858584;
+  --celeste: #cccccc;
+  --jade: #00ac4f;
+  --masala: #3b3b3b80;
+  --text: #ffffff;
+  --white: #ffffff1a;
+
+  --font-size-l: 22px;
+  --font-size-m: 16px;
+  --font-size-s: 12px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 38px;
+  --font-size-xxxl: 51px;
+  --font-size-xxxxl: 67px;
+
+  --font-family-space_mono: "Space Mono", Helvetica;
+  --font-family-work_sans: "Work Sans", Helvetica;
+}
+.spacemono-normal-white-16px {
+  color: var(--text);
+  font-family: var(--font-family-space_mono);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-white-22px {
+  color: var(--text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.spacemono-normal-gunsmoke-12px {
+  color: var(--caption--label-text);
+  font-family: var(--font-family-space_mono);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-celeste-16px {
+  color: var(--celeste);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-white-16px {
+  color: var(--text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.spacemono-normal-gunsmoke-16px {
+  color: var(--caption--label-text);
+  font-family: var(--font-family-space_mono);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-white-16px {
+  color: var(--text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.spacemono-normal-white-12px {
+  color: var(--text);
+  font-family: var(--font-family-space_mono);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.spacemono-bold-white-22px {
+  color: var(--text);
+  font-family: var(--font-family-space_mono);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.spacemono-normal-jade-16px {
+  color: var(--jade);
+  font-family: var(--font-family-space_mono);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-heavy-metal-16px {
+  color: var(--background);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-gunsmoke-16px {
+  color: var(--caption--label-text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-celeste-12px {
+  color: var(--celeste);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-white-28px {
+  color: var(--text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-semi-bold-white-38px {
+  color: var(--text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.spacemono-bold-white-38px {
+  color: var(--text);
+  font-family: var(--font-family-space_mono);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.spacemono-bold-white-28px {
+  color: var(--text);
+  font-family: var(--font-family-space_mono);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.worksans-normal-white-22px {
+  color: var(--text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-gunsmoke-16px {
+  color: var(--caption--label-text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-semi-bold-white-51px {
+  color: var(--text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-semi-bold-gunsmoke-22px {
+  color: var(--caption--label-text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-normal-white-12px {
+  color: var(--text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.spacemono-bold-gunsmoke-22px {
+  color: var(--caption--label-text);
+  font-family: var(--font-family-space_mono);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.worksans-semi-bold-heavy-metal-16px {
+  color: var(--background);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-normal-white-24px {
+  color: var(--text);
+  font-family: var(--font-family-work_sans);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* screen - connect-wallet-desktop */
+
+.connect-wallet-desktop {
+  align-items: flex-start;
+  background-color: var(--background);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  left: 0px;
+  margin: 0px;
+  min-height: 1076px;
+  min-width: 1280px;
+  mix-blend-mode: normal;
+  overflow-x: hidden;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.connect-wallet-desktop .navigation-8wupgd {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  mix-blend-mode: normal;
+  padding: 20px 50px;
+  position: relative;
+}
+
+.connect-wallet-desktop .nav-logo-9xH9iV {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .logo-t4B6Dk {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.connect-wallet-desktop .storefront-54AxI1 {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.connect-wallet-desktop .nft-marketplace-54AxI1 {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.connect-wallet-desktop .nav-nav-menu-9xH9iV {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  justify-content: flex-end;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .marketplace-Un1IMx {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  padding: 0px 20px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .marketplace-Un1IMx:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-desktop .button-RjxvLy {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .rankings-Un1IMx {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  padding: 0px 20px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .rankings-Un1IMx:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-desktop .button-sPZgTw {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .connect-a-wallet-Un1IMx {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  padding: 0px 20px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .connect-a-wallet-Un1IMx:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-desktop .button-39e2nu {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .sign-up-Un1IMx {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .sign-up-Un1IMx:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-desktop .user-xM0Zo7 {
+  background-color: transparent;
+  height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+.connect-wallet-desktop .button-xM0Zo7 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .connect-wallet-section-8wupgd {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  gap: 60px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-desktop .image-placeholder-SjxVei {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  height: 642px;
+  min-width: 610px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.connect-wallet-desktop .connect-a-wallet-SjxVei {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 40px;
+  height: auto;
+  padding: 100px 0px;
+  position: relative;
+}
+
+.connect-wallet-desktop .headline-subhead-GGDzox {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: auto;
+  position: relative;
+  width: 460px;
+}
+
+.connect-wallet-desktop .headline-subhead-9RzVMn {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-desktop .headline-USDjsx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-desktop .connect-wallet-tniHKj {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 56.1px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-desktop .subhead-USDjsx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-desktop .choose-a-wallet-you-OGQDZb {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.connect-wallet-desktop .wallet-options-GGDzox {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: 320px;
+}
+
+.connect-wallet-desktop .metamask-x4IK4N {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border: 1px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  height: 72px;
+  mix-blend-mode: normal;
+  padding: 0px 20px 0px 40px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-desktop .metamask-x4IK4N:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-desktop .metamask-VSIrA2 {
+  background-color: transparent;
+  height: 40px;
+  min-width: 40px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-desktop .metamask-FUW0ym {
+  background-color: transparent;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 40px;
+}
+
+.connect-wallet-desktop .metamask-xgRxmJ {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-desktop .wallet-connect-x4IK4N {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border: 1px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  height: 72px;
+  mix-blend-mode: normal;
+  padding: 0px 20px 0px 40px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-desktop .wallet-connect-x4IK4N:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-desktop .wallet-connect-5nKx0K {
+  background-color: transparent;
+  height: 40px;
+  min-width: 40px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-desktop .wallet-connect-Z5exZA {
+  background-color: transparent;
+  height: 40px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 40px;
+}
+
+.connect-wallet-desktop .metamask-5nKx0K {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-desktop .coinbase-x4IK4N {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border: 1px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  height: 72px;
+  mix-blend-mode: normal;
+  padding: 0px 20px 0px 40px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-desktop .coinbase-x4IK4N:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-desktop .coinbase-YGqgIF {
+  background-color: transparent;
+  height: 40px;
+  min-width: 40px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-desktop .coinbase-rzyhgu {
+  background-color: transparent;
+  height: 40px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 40px;
+}
+
+.connect-wallet-desktop .metamask-YGqgIF {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-desktop .footer-8wupgd {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 195px;
+  position: relative;
+}
+
+.connect-wallet-desktop .footer-info-uXv4jo {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  margin-left: -79.71px;
+  margin-right: -79.71px;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .nft-marketplace-info-BXyHqz {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  padding: 0px 84px 0px 0px;
+  position: relative;
+  width: 327.4138488769531px;
+}
+
+.connect-wallet-desktop .logo-G9c7qj {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.connect-wallet-desktop .storefront-uiMnE4 {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.connect-wallet-desktop .nft-marketplace-uiMnE4 {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.connect-wallet-desktop .additional-info-G9c7qj {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .nft-marketplace-ui-c-69TbBE {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: 238px;
+}
+
+.connect-wallet-desktop .community-info-69TbBE {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .join-our-community-pQjxeN {
+  background-color: transparent;
+  height: 18px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.connect-wallet-desktop .icons-pQjxeN {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .discord-logo-MMGlER {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-desktop .youtube-logo-MMGlER {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-desktop .icon-twitter-MMGlER {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-desktop .icon-instagram-MMGlER {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-desktop .explore-BXyHqz {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  position: relative;
+  width: 240px;
+}
+
+.connect-wallet-desktop .explore-01FpDT {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .pages-01FpDT {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .marketplace-CD8oh9 {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .rankings-CD8oh9 {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .connect-a-wallet-CD8oh9 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .subscribe-BXyHqz {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .join-our-weekly-digest-wxrCHm {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .subscribe-form-info-wxrCHm {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .get-exclusive-promot-cJp9bR {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: 330px;
+}
+
+.connect-wallet-desktop .subscribe-form-cJp9bR {
+  align-items: center;
+  background-color: var(--text);
+  border-radius: 20px;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 16px 0px 16px 20px;
+  position: relative;
+  width: 420px;
+}
+
+.connect-wallet-desktop .enter-your-email-here-2eHB2z {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 22px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  min-width: 209px;
+  mix-blend-mode: normal;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-desktop .enter-your-email-here-2eHB2z::placeholder {
+  color: #2b2b2b99;
+}
+
+.connect-wallet-desktop .button-2eHB2z {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: flex-end;
+  margin-bottom: -16px;
+  margin-top: -16px;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .button-2eHB2z:hover {
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+.connect-wallet-desktop .button-qK2Q53 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-desktop .frame-239-uXv4jo {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  margin-left: -79.71px;
+  margin-right: -79.71px;
+  position: relative;
+  width: 1049.413818359375px;
+}
+
+.connect-wallet-desktop .divider-mG6b8p {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 1049.4140625px;
+  object-fit: cover;
+  position: relative;
+}
+
+.connect-wallet-desktop .nft-market-use-this-template-freely-mG6b8p {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+/* screen - connect-wallet-mobile */
+
+.connect-wallet-mobile {
+  align-items: flex-start;
+  background-color: var(--background);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  left: 0px;
+  margin: 0px;
+  min-height: 1492px;
+  min-width: 375px;
+  mix-blend-mode: normal;
+  overflow-x: hidden;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.connect-wallet-mobile .navigation-xGMS9S {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  mix-blend-mode: normal;
+  padding: 15px 30px;
+  position: relative;
+}
+
+.connect-wallet-mobile .nav-logo-Q6BFu3 {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-mobile .nav-logo-ShdztY {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-mobile .logo-GPdxeR {
+  background-color: transparent;
+  height: 24px;
+  min-width: 182.56039428710938px;
+  position: relative;
+}
+
+.connect-wallet-mobile .storefront-2OxNai {
+  background-color: transparent;
+  height: 24px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.connect-wallet-mobile .nft-marketplace-2OxNai {
+  background-color: transparent;
+  height: 15px;
+  left: 33px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 6px;
+  width: 150px;
+}
+
+.connect-wallet-mobile .nav-nav-menu-Q6BFu3 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  justify-content: flex-end;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-mobile .burger-menu-CRABLz {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.connect-wallet-mobile .connect-wallet-section-xGMS9S {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-mobile .image-placeholder-cxxHJx {
+  align-self: stretch;
+  background-color: transparent;
+  height: 232px;
+  min-width: 375px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.connect-wallet-mobile .create-account-form-cxxHJx {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  padding: 30px 0px 40px;
+  position: relative;
+  width: 315px;
+}
+
+.connect-wallet-mobile .headline-subhead-N6T5ba {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .headline-subhead-gK4mCS {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .headline-v7UfTJ {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .connect-wallet-vU4Jcg {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 45.6px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-mobile .subhead-v7UfTJ {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .choose-a-wallet-you-mnxZfG {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.connect-wallet-mobile .wallet-options-N6T5ba {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  margin-left: -2.5px;
+  margin-right: -2.5px;
+  position: relative;
+  width: 320px;
+}
+
+.connect-wallet-mobile .metamask-S9z3SM {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border: 1px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 0px 20px 0px 40px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-mobile .metamask-S9z3SM:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-mobile .metamask-3DxxTC {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-mobile .metamask-RWubaD {
+  background-color: transparent;
+  height: 32px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.connect-wallet-mobile .metamask-3UXMqZ {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-mobile .wallet-connect-S9z3SM {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border: 1px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 0px 20px 0px 40px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-mobile .wallet-connect-S9z3SM:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-mobile .wallet-connect-nQAneb {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-mobile .wallet-connect-tcLDSm {
+  background-color: transparent;
+  height: 32px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.connect-wallet-mobile .metamask-nQAneb {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-mobile .coin-base-S9z3SM {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border: 1px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 0px 20px 0px 40px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-mobile .coin-base-S9z3SM:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-mobile .coinbase-b3dz6J {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-mobile .coinbase-53jVML {
+  background-color: transparent;
+  height: 32px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.connect-wallet-mobile .metamask-b3dz6J {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-mobile .footer-xGMS9S {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 195px;
+  position: relative;
+}
+
+.connect-wallet-mobile .footer-info-lQMQWa {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  margin-left: -165px;
+  margin-right: -165px;
+  position: relative;
+  width: 315px;
+}
+
+.connect-wallet-mobile .nft-marketplace-info-nzDESM {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .logo-0UDEoo {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.connect-wallet-mobile .storefront-7Mxz4c {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.connect-wallet-mobile .nft-marketplace-7Mxz4c {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.connect-wallet-mobile .additional-info-0UDEoo {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .nft-marketplace-ui-c-mhHdsZ {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.connect-wallet-mobile .community-info-mhHdsZ {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .join-our-community-Pgkxth {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-mobile .icons-Pgkxth {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-mobile .discord-logo-zaLb7J {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-mobile .youtube-logo-zaLb7J {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-mobile .icon-twitter-zaLb7J {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-mobile .icon-instagram-zaLb7J {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-mobile .explore-nzDESM {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .explore-JRRUAa {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-mobile .pages-JRRUAa {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .marketplace-DfdUUy {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-mobile .rankings-DfdUUy {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-mobile .connect-a-wallet-DfdUUy {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-mobile .subscribe-nzDESM {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .join-our-weekly-digest-jxsvYq {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-mobile .subscribe-form-info-jxsvYq {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-mobile .get-exclusive-promot-heImgY {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.connect-wallet-mobile .subscribe-widget-mobile-heImgY {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-mobile .type-form-oSYNM4 {
+  align-items: center;
+  background-color: var(--text);
+  border: 1px solid;
+  border-color: var(--caption--label-text);
+  border-radius: 20px;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  mix-blend-mode: normal;
+  padding: 16px 20px;
+  position: relative;
+  width: 315px;
+}
+
+.connect-wallet-mobile .enter-your-email-address-zbpcdr {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 22px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-bottom: -3px;
+  margin-top: -5px;
+  min-width: 275px;
+  mix-blend-mode: normal;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-mobile .enter-your-email-address-zbpcdr::placeholder {
+  color: #2b2b2b99;
+}
+
+.connect-wallet-mobile .button-oSYNM4 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-mobile .button-oSYNM4:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-mobile .icon-mail-Zcivox {
+  background-color: transparent;
+  height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+.connect-wallet-mobile .button-Zcivox {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-mobile .frame-239-lQMQWa {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  margin-left: -165px;
+  margin-right: -165px;
+  position: relative;
+  width: 315px;
+}
+
+.connect-wallet-mobile .divider-eonfk4 {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 315px;
+  object-fit: cover;
+  position: relative;
+}
+
+.connect-wallet-mobile .nft-market-use-this-template-freely-eonfk4 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+/* screen - connect-wallet-tablet */
+
+.connect-wallet-tablet {
+  align-items: flex-start;
+  background-color: var(--background);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  left: 0px;
+  margin: 0px;
+  min-height: 1287px;
+  min-width: 834px;
+  mix-blend-mode: normal;
+  overflow-x: hidden;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.connect-wallet-tablet .navigation-sArxnh {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  mix-blend-mode: normal;
+  padding: 15px 50px;
+  position: relative;
+}
+
+.connect-wallet-tablet .nav-logo-0CnZOm {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-tablet .nav-logo-rWw64T {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-tablet .logo-y3EJxg {
+  background-color: transparent;
+  height: 24px;
+  min-width: 182.5603790283203px;
+  position: relative;
+}
+
+.connect-wallet-tablet .storefront-hg2ume {
+  background-color: transparent;
+  height: 24px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.connect-wallet-tablet .nft-marketplace-hg2ume {
+  background-color: transparent;
+  height: 15px;
+  left: 33px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 6px;
+  width: 150px;
+}
+
+.connect-wallet-tablet .nav-nav-menu-0CnZOm {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  justify-content: flex-end;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-tablet .burger-menu-NcOsDA {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.connect-wallet-tablet .connect-wallet-section-sArxnh {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  gap: 40px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-tablet .image-placeholder-VsewAU {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  height: 530px;
+  min-width: 397px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.connect-wallet-tablet .connect-a-wallet-VsewAU {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 40px;
+  height: auto;
+  padding: 80px 0px;
+  position: relative;
+}
+
+.connect-wallet-tablet .headline-subhead-xpVuVP {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: auto;
+  position: relative;
+  width: 325px;
+}
+
+.connect-wallet-tablet .headline-subhead-9YxpY0 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-tablet .connect-wallet-xZihd5 {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 45.6px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: 325px;
+}
+
+.connect-wallet-tablet .choose-a-wallet-you-xZihd5 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.connect-wallet-tablet .wallet-options-xpVuVP {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: 320px;
+}
+
+.connect-wallet-tablet .metamask-kzve7X {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border: 1px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 0px 20px 0px 40px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-tablet .metamask-kzve7X:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-tablet .metamask-FnSkng {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-tablet .metamask-G1RN0H {
+  background-color: transparent;
+  height: 32px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.connect-wallet-tablet .metamask-qxRbQG {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-tablet .wallet-connect-kzve7X {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border: 1px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 0px 20px 0px 40px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-tablet .wallet-connect-kzve7X:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-tablet .wallet-connect-cuXJmQ {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-tablet .wallet-connect-8qxexi {
+  background-color: transparent;
+  height: 32px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.connect-wallet-tablet .metamask-cuXJmQ {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-tablet .coin-base-kzve7X {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border: 1px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 0px 20px 0px 40px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-tablet .coin-base-kzve7X:hover {
+  transform: scale(0.95);
+}
+
+.connect-wallet-tablet .coinbase-feM1MK {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.connect-wallet-tablet .coinbase-sRx4UU {
+  background-color: transparent;
+  height: 32px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.connect-wallet-tablet .metamask-feM1MK {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-tablet .footer-sArxnh {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 195px;
+  position: relative;
+}
+
+.connect-wallet-tablet .footer-info-pbSm7c {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  margin-left: -123px;
+  margin-right: -123px;
+  position: relative;
+  width: 690px;
+}
+
+.connect-wallet-tablet .nft-marketplace-info-S7R0Jo {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-tablet .logo-VHJ9NR {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.connect-wallet-tablet .storefront-cfAZLe {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.connect-wallet-tablet .nft-marketplace-cfAZLe {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.connect-wallet-tablet .additional-info-VHJ9NR {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-tablet .nft-marketplace-ui-c-2x4Dcc {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-tablet .community-info-2x4Dcc {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-tablet .join-our-community-Po5vQz {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-tablet .icons-Po5vQz {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.connect-wallet-tablet .discord-logo-CQpaf3 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-tablet .youtube-logo-CQpaf3 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-tablet .icon-twitter-CQpaf3 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-tablet .icon-instagram-CQpaf3 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.connect-wallet-tablet .explore-S7R0Jo {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-tablet .explore-eAUJ4B {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-tablet .pages-eAUJ4B {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-tablet .marketplace-WpOAnf {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-tablet .rankings-WpOAnf {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-tablet .connect-a-wallet-WpOAnf {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-tablet .subscribe-S7R0Jo {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-tablet .join-our-weekly-digest-Z0GBUs {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-tablet .subscribe-form-info-Z0GBUs {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.connect-wallet-tablet .get-exclusive-promot-O92kp3 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-tablet .subscribe-form-O92kp3 {
+  align-items: center;
+  background-color: var(--text);
+  border-radius: 20px;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 16px 0px 16px 20px;
+  position: relative;
+  width: 420px;
+}
+
+.connect-wallet-tablet .enter-your-email-here-Rf5Ak7 {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 22px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  min-width: 209px;
+  mix-blend-mode: normal;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.connect-wallet-tablet .enter-your-email-here-Rf5Ak7::placeholder {
+  color: #2b2b2b99;
+}
+
+.connect-wallet-tablet .button-Rf5Ak7 {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: flex-end;
+  margin-bottom: -16px;
+  margin-top: -16px;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.connect-wallet-tablet .button-Rf5Ak7:hover {
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+.connect-wallet-tablet .button-GolZu9 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.connect-wallet-tablet .frame-239-pbSm7c {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  margin-left: -123px;
+  margin-right: -123px;
+  position: relative;
+  width: 690px;
+}
+
+.connect-wallet-tablet .divider-XSswnk {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 690px;
+  object-fit: cover;
+  position: relative;
+}
+
+.connect-wallet-tablet .nft-market-use-this-template-freely-XSswnk {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+@media screen and (max-width: 833px) {
+  .screen.connect-wallet-desktop {
+    display: none;
+  }
+  .screen.connect-wallet-tablet {
+    display: none;
+  }
+}
+@media screen and (min-width: 834px) and (max-width: 1279px) {
+  .screen.connect-wallet-desktop {
+    display: none;
+  }
+  .screen.connect-wallet-mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .screen.connect-wallet-tablet {
+    display: none;
+  }
+  .screen.connect-wallet-mobile {
+    display: none;
+  }
+}

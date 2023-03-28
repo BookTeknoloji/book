@@ -1,0 +1,7708 @@
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical>* {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal>* {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+:root {
+  --background: #2b2b2b;
+  --background---secondary: #3b3b3b;
+  --black: #000000;
+  --call-to-action: #a259ff;
+  --caption--label-text: #858584;
+  --celeste: #cccccc;
+  --jade: #00ac4f;
+  --masala: #3b3b3b80;
+  --text: #ffffff;
+  --white: #ffffff1a;
+
+  --font-size-l: 22px;
+  --font-size-m: 16px;
+  --font-size-s: 12px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 38px;
+  --font-size-xxxl: 51px;
+  --font-size-xxxxl: 67px;
+}
+
+.spacemono-normal-white-16px {
+  color: var(--text);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-white-22px {
+  color: var(--text);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.spacemono-normal-gunsmoke-12px {
+  color: var(--caption--label-text);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-celeste-16px {
+  color: var(--celeste);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-white-16px {
+  color: var(--text);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.spacemono-normal-gunsmoke-16px {
+  color: var(--caption--label-text);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-white-16px {
+  color: var(--text);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.spacemono-normal-white-12px {
+  color: var(--text);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.spacemono-bold-white-22px {
+  color: var(--text);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.spacemono-normal-jade-16px {
+  color: var(--jade);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-heavy-metal-16px {
+  color: var(--background);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-gunsmoke-16px {
+  color: var(--caption--label-text);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-celeste-12px {
+  color: var(--celeste);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-white-28px {
+  color: var(--text);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-semi-bold-white-38px {
+  color: var(--text);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.spacemono-bold-white-38px {
+  color: var(--text);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.spacemono-bold-white-28px {
+  color: var(--text);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.worksans-normal-white-22px {
+  color: var(--text);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-gunsmoke-16px {
+  color: var(--caption--label-text);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-semi-bold-white-51px {
+  color: var(--text);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-semi-bold-gunsmoke-22px {
+  color: var(--caption--label-text);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-normal-white-12px {
+  color: var(--text);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.spacemono-bold-gunsmoke-22px {
+  color: var(--caption--label-text);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.worksans-semi-bold-heavy-metal-16px {
+  color: var(--background);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-normal-white-24px {
+  color: var(--text);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* screen - artist-page-desktop */
+
+.artist-page-desktop {
+  align-items: flex-start;
+  background-color: var(--background);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  left: 0px;
+  margin: 0px;
+  min-height: 2958px;
+  min-width: 1280px;
+  mix-blend-mode: normal;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.artist-page-desktop .navigation-qYGvvW {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  mix-blend-mode: normal;
+  padding: 20px 50px;
+  position: relative;
+}
+
+.artist-page-desktop .nav-logo-8xDBvf {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .logo-AYIxsh {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.artist-page-desktop .storefront-SWqcO3 {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.artist-page-desktop .nft-marketplace-SWqcO3 {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.artist-page-desktop .nav-nav-menu-8xDBvf {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  justify-content: flex-end;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .marketplace-XPSS6h {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  padding: 0px 20px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-desktop .marketplace-XPSS6h:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .button-cLb3KP {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .rankings-XPSS6h {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  padding: 0px 20px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-desktop .rankings-XPSS6h:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .button-c5j522 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .connect-a-wallet-XPSS6h {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  padding: 0px 20px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-desktop .connect-a-wallet-XPSS6h:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .button-RJ59pl {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .sign-up-XPSS6h {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-desktop .sign-up-XPSS6h:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .user-vtQygI {
+  background-color: transparent;
+  height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+.artist-page-desktop .button-vtQygI {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .cover-profile-image-qYGvvW {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .image-place-holder-1JSqxm {
+  align-self: stretch;
+  background-color: transparent;
+  height: 320px;
+  min-width: 1280px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .profile-image-1JSqxm {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  margin-top: -70px;
+  position: relative;
+  width: 1050px;
+}
+
+.artist-page-desktop .avatar-DVlxwF {
+  align-items: flex-start;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  margin-bottom: -2px;
+  margin-left: -2px;
+  margin-top: -2px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-desktop .avatar-DVlxwF:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .asset-12-2-6lM2gg {
+  background-color: transparent;
+  height: 120px;
+  min-width: 120px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-placeholder-Yxxqzx {
+  background-color: transparent;
+  height: 120px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 120px;
+}
+
+.artist-page-desktop .artist-info-qYGvvW {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .artist-info-section-Q5H19r {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 1050px;
+}
+
+.artist-page-desktop .artist-name-button-lA9kvM {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 100px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .artist-info-5Qbxfr {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 599px;
+}
+
+.artist-page-desktop .artist-name-XMXW90 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 56.1px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: 510px;
+}
+
+.artist-page-desktop .stats-XMXW90 {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: 510px;
+}
+
+.artist-page-desktop .total-sale-xpDNDs {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .x240k-d6HTxS {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 39.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .total-sale-d6HTxS {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .auctions-xpDNDs {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .x100k-aPLBx4 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 39.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .auctions-aPLBx4 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artists-xpDNDs {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .x240k-Vp4J1M {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 39.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artists-Vp4J1M {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .bio-XMXW90 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .bio-HdB0ik {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .the-internets-friendliest-designer-kid-HdB0ik {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .web-links-XMXW90 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .links-wK1OPP {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .icons-wK1OPP {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .icon-globe-rxyfnB {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .icon-globe-rxyfnB:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .discord-logo-rxyfnB {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .discord-logo-rxyfnB:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .youtube-logo-rxyfnB {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .youtube-logo-rxyfnB:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .icon-twitter-rxyfnB {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .icon-twitter-rxyfnB:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .icon-instagram-rxyfnB {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .icon-instagram-rxyfnB:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .ct-as-5Qbxfr {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  justify-content: flex-end;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .button-GL5cEP {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 186px;
+}
+
+.artist-page-desktop .button-GL5cEP:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .icon-copy-b0ZGqC {
+  background-color: transparent;
+  height: 20px;
+  margin-left: -29.5px;
+  min-width: 20px;
+  position: relative;
+}
+
+.artist-page-desktop .button-b0ZGqC {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-right: -29.5px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .button-a48MTS {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-desktop .button-a48MTS:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .plus-uYZYmc {
+  background-color: transparent;
+  height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+.artist-page-desktop .button-uYZYmc {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .frame-249-qYGvvW {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .line-2-YIOaNd {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 1280px;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .frame-247-YIOaNd {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+  width: 1050px;
+}
+
+.artist-page-desktop .tabs-4CltWC {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .tab-48nxSK {
+  align-items: center;
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--caption--label-text);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 30px;
+  position: relative;
+}
+
+.artist-page-desktop .created-0mEhqa {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .frame-81-0mEhqa {
+  align-items: center;
+  background-color: var(--caption--label-text);
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 5px 10px;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .x302-34tx6q {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .tab-JWrMxZ {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 30px;
+  position: relative;
+}
+
+.artist-page-desktop .created-51AAUN {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .frame-81-51AAUN {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 5px 10px;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .x302-vauVDJ {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .tab-EpfqQz {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 30px;
+  position: relative;
+}
+
+.artist-page-desktop .created-ings7Q {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .frame-81-ings7Q {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 5px 10px;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .x302-UdxgyG {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .nft-cards-section-qYGvvW {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 80px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .nft-cards-row-vEF2l6 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 1050px;
+}
+
+.artist-page-desktop .nft-card-QfEt6t {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .nft-card-QfEt6t:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .image-Uyvcxv {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .image-placeholder-AS8FAX {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .nft-info-Uyvcxv {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-desktop .artst-info-UutHXN {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .nft-name-xYz7E6 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artist-avatar-name-xYz7E6 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-6CWEj8 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .asset-12-2-kma9nJ {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-placeholder-xen6jR {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-desktop .nft-artist-6CWEj8 {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .additional-info-UutHXN {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .price-iEsDBZ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .price-HFllGb {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x163-eth-HFllGb {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .highest-bid-iEsDBZ {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-desktop .highest-bid-pYjDS0 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x033-w-eth-pYjDS0 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .nft-card-vF8Kbo {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .nft-card-vF8Kbo:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .image-YCx3qP {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .image-placeholder-krv8sF {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .nft-info-YCx3qP {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-desktop .artst-info-PvsxLx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .nft-name-12c4Nh {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artist-avatar-name-12c4Nh {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-u4AyQf {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .asset-12-2-K4dmQg {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-placeholder-832D2b {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-desktop .nft-artist-u4AyQf {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .additional-info-PvsxLx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .price-S7Fh5N {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .price-70FM4g {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x163-eth-70FM4g {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .highest-bid-S7Fh5N {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-desktop .highest-bid-3kJaLi {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x033-w-eth-3kJaLi {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .nft-card-y2x8NL {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .nft-card-y2x8NL:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .image-MCTBJS {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .image-placeholder-YiPb90 {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .nft-info-MCTBJS {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-desktop .artst-info-CIj6ce {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .nft-name-z0halQ {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artist-avatar-name-z0halQ {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-uJbcbk {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .asset-12-2-tqshui {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-placeholder-ABLAU5 {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-desktop .nft-artist-uJbcbk {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .additional-info-CIj6ce {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .price-tndapE {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .price-fzFJ4Y {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x163-eth-fzFJ4Y {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .highest-bid-tndapE {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-desktop .highest-bid-VMqj0g {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x033-w-eth-VMqj0g {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .nft-cards-row-9edxC6 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 1050px;
+}
+
+.artist-page-desktop .nft-card-aVGima {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .nft-card-aVGima:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .image-IjkxYL {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .image-placeholder-935cD9 {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .nft-info-IjkxYL {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-desktop .artst-info-TX8xbc {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .nft-name-n72Rhx {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artist-avatar-name-n72Rhx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-iwEXZl {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .asset-12-2-xtdwZI {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-placeholder-jjBUEX {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-desktop .nft-artist-iwEXZl {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .additional-info-TX8xbc {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .price-qCgvht {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .price-RUaCHE {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x163-eth-RUaCHE {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .highest-bid-qCgvht {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-desktop .highest-bid-v2HDYj {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x033-w-eth-v2HDYj {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .nft-card-8K7eAO {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .nft-card-8K7eAO:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .image-OPcxvm {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .image-placeholder-wL9AyK {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .nft-info-OPcxvm {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-desktop .artst-info-Jq3UxW {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .nft-name-p2a0jY {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artist-avatar-name-p2a0jY {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-jrBO7I {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .asset-12-2-wltzV0 {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-placeholder-JIrdlx {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-desktop .nft-artist-jrBO7I {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .additional-info-Jq3UxW {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .price-tkpDlw {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .price-vkv2QF {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x163-eth-vkv2QF {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .highest-bid-tkpDlw {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-desktop .highest-bid-GXSkRy {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x033-w-eth-GXSkRy {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .nft-card-G8Y7Zr {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .nft-card-G8Y7Zr:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .image-GOYW51 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .image-placeholder-DiKLpq {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .nft-info-GOYW51 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-desktop .artst-info-UcblYx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .nft-name-s9zZW2 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artist-avatar-name-s9zZW2 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-WGwYia {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .asset-12-2-xsU17j {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-placeholder-wtLCD1 {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-desktop .nft-artist-WGwYia {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .additional-info-UcblYx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .price-JCt7Da {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .price-GSHpEY {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x163-eth-GSHpEY {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .highest-bid-JCt7Da {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-desktop .highest-bid-S8HuNH {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x033-w-eth-S8HuNH {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .nft-cards-row-Ypypxj {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 1050px;
+}
+
+.artist-page-desktop .nft-card-4vLI89 {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .nft-card-4vLI89:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .image-EaVxtN {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .image-placeholder-2LVfxc {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .nft-info-EaVxtN {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-desktop .artst-info-vTtArD {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .nft-name-vw6nzz {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artist-avatar-name-vw6nzz {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-YZsUwN {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .asset-12-2-cCVDWe {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-placeholder-0Gzx5V {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-desktop .nft-artist-YZsUwN {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .additional-info-vTtArD {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .price-y4x6az {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .price-xFdYxx {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x163-eth-xFdYxx {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .highest-bid-y4x6az {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-desktop .highest-bid-5sRxn4 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x033-w-eth-5sRxn4 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .nft-card-Zx1pxB {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .nft-card-Zx1pxB:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .image-vSzUuv {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .image-placeholder-zoX3zW {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .nft-info-vSzUuv {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-desktop .artst-info-SRh1Ad {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .nft-name-ZjWXfY {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artist-avatar-name-ZjWXfY {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-JAWjF4 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .asset-12-2-srLowf {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-placeholder-v79aiW {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-desktop .nft-artist-JAWjF4 {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .additional-info-SRh1Ad {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .price-Smxk5c {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .price-zSrDxB {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x163-eth-zSrDxB {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .highest-bid-Smxk5c {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-desktop .highest-bid-aTCAuU {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x033-w-eth-aTCAuU {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .nft-card-XxUv92 {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-desktop .nft-card-XxUv92:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-desktop .image-oENX7m {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .image-placeholder-X4Fxve {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .nft-info-oENX7m {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-desktop .artst-info-HdKgMb {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .nft-name-Ohm0W1 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .artist-avatar-name-Ohm0W1 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-ZT9TdS {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .asset-12-2-vXLdnH {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-desktop .avatar-placeholder-VGs8Ap {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-desktop .nft-artist-ZT9TdS {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .additional-info-HdKgMb {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-desktop .price-oGbxZq {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-desktop .price-AwbOO0 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x163-eth-AwbOO0 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .highest-bid-oGbxZq {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-desktop .highest-bid-PK6E7t {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .x033-w-eth-PK6E7t {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .footer-qYGvvW {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border-bottom-style: none;
+  border-color: var(--background);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 195px;
+  position: relative;
+}
+
+.artist-page-desktop .footer-info-sDUl0m {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  margin-left: -79.71px;
+  margin-right: -79.71px;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .nft-marketplace-info-d5xRrn {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  padding: 0px 84px 0px 0px;
+  position: relative;
+  width: 327.4138488769531px;
+}
+
+.artist-page-desktop .logo-ZkUIeN {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.artist-page-desktop .storefront-FK1ytx {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.artist-page-desktop .nft-marketplace-FK1ytx {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.artist-page-desktop .additional-info-ZkUIeN {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .nft-marketplace-ui-c-HQMHlx {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: 238px;
+}
+
+.artist-page-desktop .community-info-HQMHlx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .join-our-community-yXxHFZ {
+  background-color: transparent;
+  height: 18px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.artist-page-desktop .icons-yXxHFZ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .discord-logo-F8xOoV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-desktop .youtube-logo-F8xOoV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-desktop .icon-twitter-F8xOoV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-desktop .icon-instagram-F8xOoV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-desktop .explore-d5xRrn {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  position: relative;
+  width: 240px;
+}
+
+.artist-page-desktop .explore-xCCqMb {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .pages-xCCqMb {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .marketplace-GMLTxa {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .rankings-GMLTxa {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .connect-a-wallet-GMLTxa {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .subscribe-d5xRrn {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .join-our-weekly-digest-oEuUg4 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .subscribe-form-info-oEuUg4 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-desktop .get-exclusive-promot-zMYmTB {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: 330px;
+}
+
+.artist-page-desktop .subscribe-form-zMYmTB {
+  align-items: center;
+  background-color: var(--text);
+  border-radius: 20px;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 16px 0px 16px 20px;
+  position: relative;
+  width: 420px;
+}
+
+.artist-page-desktop .enter-your-email-here-RbO6xW {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 22px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  min-width: 209px;
+  mix-blend-mode: normal;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-desktop .enter-your-email-here-RbO6xW::placeholder {
+  color: #2b2b2b99;
+}
+
+.artist-page-desktop .button-RbO6xW {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: flex-end;
+  margin-bottom: -16px;
+  margin-top: -16px;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-desktop .button-RbO6xW:hover {
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+.artist-page-desktop .button-QHqgdZ {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-desktop .frame-239-sDUl0m {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  margin-left: -79.71px;
+  margin-right: -79.71px;
+  position: relative;
+  width: 1049.413818359375px;
+}
+
+.artist-page-desktop .divider-XxQs34 {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 1049.4140625px;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-desktop .nft-market-use-this-template-freely-XxQs34 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* screen - artist-page-mobile */
+
+.artist-page-mobile {
+  align-items: flex-start;
+  background-color: var(--background);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  left: 0px;
+  margin: 0px;
+  min-height: 3152px;
+  min-width: 375px;
+  mix-blend-mode: normal;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.artist-page-mobile .navigation-JVmuo6 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  mix-blend-mode: normal;
+  padding: 15px 30px;
+  position: relative;
+}
+
+.artist-page-mobile .nav-logo-OeeYyl {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-mobile .nav-logo-SAhjYQ {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-mobile .logo-qRwpWF {
+  background-color: transparent;
+  height: 24px;
+  min-width: 182.56039428710938px;
+  position: relative;
+}
+
+.artist-page-mobile .storefront-YDqzMP {
+  background-color: transparent;
+  height: 24px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-mobile .nft-marketplace-YDqzMP {
+  background-color: transparent;
+  height: 15px;
+  left: 33px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 6px;
+  width: 150px;
+}
+
+.artist-page-mobile .nav-nav-menu-OeeYyl {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  justify-content: flex-end;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-mobile .burger-menu-NmykbI {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.artist-page-mobile .cover-profile-image-JVmuo6 {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .image-place-holder-YVElnN {
+  align-self: stretch;
+  background-color: transparent;
+  height: 250px;
+  min-width: 375px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-mobile .profile-image-YVElnN {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  margin-top: -70px;
+  position: relative;
+  width: 375px;
+}
+
+.artist-page-mobile .avatar-MFlrHC {
+  align-items: flex-start;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  margin-bottom: -2px;
+  margin-top: -2px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-mobile .avatar-MFlrHC:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .asset-12-2-LXDx7s {
+  background-color: transparent;
+  height: 120px;
+  min-width: 120px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-mobile .avatar-placeholder-VU4iAx {
+  background-color: transparent;
+  height: 120px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 120px;
+}
+
+.artist-page-mobile .artist-info-JVmuo6 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 30px 0px;
+  position: relative;
+}
+
+.artist-page-mobile .frame-264-c17UkS {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 315px;
+}
+
+.artist-page-mobile .artist-name-UPiTUu {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 39.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .ct-as-UPiTUu {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .button-Tx9Rxk {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .button-Tx9Rxk:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .icon-copy-12nXAH {
+  background-color: transparent;
+  height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+.artist-page-mobile .button-12nXAH {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-mobile .button-WxrqKZ {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .button-WxrqKZ:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .plus-P2yyj3 {
+  background-color: transparent;
+  height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+.artist-page-mobile .button-P2yyj3 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-mobile .stats-UPiTUu {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .total-sale-PrgPJf {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .x240k-5H6kmg {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .total-sale-5H6kmg {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .auctions-PrgPJf {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .x100k-1N1Qc9 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .auctions-1N1Qc9 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .artists-PrgPJf {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .x240k-rxlB0E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .artists-rxlB0E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .bio-UPiTUu {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .bio-Q2yD8N {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .the-internets-friendliest-designer-kid-Q2yD8N {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .web-links-UPiTUu {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .links-9xTx4R {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-mobile .icons-9xTx4R {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-mobile .icon-globe-nMUmmJ {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .icon-globe-nMUmmJ:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .discord-logo-nMUmmJ {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .discord-logo-nMUmmJ:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .youtube-logo-nMUmmJ {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .youtube-logo-nMUmmJ:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .icon-twitter-nMUmmJ {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .icon-twitter-nMUmmJ:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .icon-instagram-nMUmmJ {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .icon-instagram-nMUmmJ:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .tab-bar-JVmuo6 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-mobile .line-2-PET94j {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 375px;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-mobile .frame-247-PET94j {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+  width: 315px;
+}
+
+.artist-page-mobile .tabs-ALOOTU {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .tab-21MWTy {
+  align-items: center;
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--caption--label-text);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 10px;
+  position: relative;
+}
+
+.artist-page-mobile .created-HcVri5 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-mobile .tab-ZYJT9d {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 10px;
+  position: relative;
+}
+
+.artist-page-mobile .created-0cuTK1 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-mobile .tab-draiTC {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 10px;
+  position: relative;
+}
+
+.artist-page-mobile .created-kAjhEi {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-mobile .nft-cards-section-JVmuo6 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 80px 0px;
+  position: relative;
+}
+
+.artist-page-mobile .nft-cards-row-vyg2x6 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 315px;
+}
+
+.artist-page-mobile .nft-card-xKCEbr {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 402px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .nft-card-xKCEbr:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .image-8LQQCG {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .image-placeholder-vXuHTN {
+  align-self: stretch;
+  background-color: transparent;
+  height: 238px;
+  min-width: 315px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-mobile .nft-info-8LQQCG {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 20px 25px;
+  position: relative;
+}
+
+.artist-page-mobile .artist-info-qzMN4s {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .nft-name-PfEZ2m {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .artist-avatar-name-PfEZ2m {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .avatar-aRYBLh {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-mobile .asset-12-2-bx6cxE {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-mobile .avatar-placeholder-NCuIYz {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-mobile .artist-name-aRYBLh {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .nft-artist-jevxYs {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .additional-info-qzMN4s {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .price-QUA9IC {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: 34px;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-mobile .price-PxbZVa {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .x163-eth-PxbZVa {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .highest-bid-QUA9IC {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: 34px;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-mobile .highest-bid-jldidO {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .x033-w-eth-jldidO {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .nft-card-CRWL4U {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 402px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .nft-card-CRWL4U:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .image-0VUgxn {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .image-placeholder-6VmzG9 {
+  align-self: stretch;
+  background-color: transparent;
+  height: 238px;
+  min-width: 315px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-mobile .nft-info-0VUgxn {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 20px 25px;
+  position: relative;
+}
+
+.artist-page-mobile .artist-info-bQjTUn {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .nft-name-Qdos7b {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .artist-avatar-name-Qdos7b {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .avatar-rQtk7t {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-mobile .asset-12-2-IXPPML {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-mobile .avatar-placeholder-H0D0nj {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-mobile .artist-name-rQtk7t {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .nft-artist-FGNpnP {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .additional-info-bQjTUn {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .price-bbAN2a {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: 34px;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-mobile .price-nBlprY {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .x163-eth-nBlprY {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .highest-bid-bbAN2a {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: 34px;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-mobile .highest-bid-loQelv {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .x033-w-eth-loQelv {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .nft-card-rIDUug {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 402px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .nft-card-rIDUug:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .image-9YVhJt {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .image-placeholder-YexOu4 {
+  align-self: stretch;
+  background-color: transparent;
+  height: 238px;
+  min-width: 315px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-mobile .nft-info-9YVhJt {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 20px 25px;
+  position: relative;
+}
+
+.artist-page-mobile .artist-info-e6bs2x {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .nft-name-4DM0r1 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .artist-avatar-name-4DM0r1 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .avatar-JirrKQ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-mobile .asset-12-2-fkahNl {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-mobile .avatar-placeholder-Uxbn8u {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-mobile .artist-name-JirrKQ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .nft-artist-mgRDkx {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .additional-info-e6bs2x {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .price-8TJXzi {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: 34px;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-mobile .price-7HetMY {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .x163-eth-7HetMY {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .highest-bid-8TJXzi {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: 34px;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-mobile .highest-bid-ByYPio {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .x033-w-eth-ByYPio {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .footer-JVmuo6 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border-bottom-style: none;
+  border-color: var(--background);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 195px;
+  position: relative;
+}
+
+.artist-page-mobile .footer-info-U04feP {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  margin-left: -165px;
+  margin-right: -165px;
+  position: relative;
+  width: 315px;
+}
+
+.artist-page-mobile .nft-marketplace-info-Yy5axB {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .logo-ei46Bu {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.artist-page-mobile .storefront-AsHXJx {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.artist-page-mobile .nft-marketplace-AsHXJx {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.artist-page-mobile .additional-info-ei46Bu {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .nft-marketplace-ui-c-ZLhfqN {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.artist-page-mobile .community-info-ZLhfqN {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .join-our-community-avx7aV {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .icons-avx7aV {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-mobile .discord-logo-BHttl1 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-mobile .youtube-logo-BHttl1 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-mobile .icon-twitter-BHttl1 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-mobile .icon-instagram-BHttl1 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-mobile .explore-Yy5axB {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .explore-OCRZtt {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .pages-OCRZtt {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .marketplace-BzyEdl {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-mobile .rankings-BzyEdl {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-mobile .connect-a-wallet-BzyEdl {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-mobile .subscribe-Yy5axB {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .join-our-weekly-digest-811TGq {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .subscribe-form-info-811TGq {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-mobile .get-exclusive-promot-rsFEe9 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.artist-page-mobile .subscribe-widget-mobile-rsFEe9 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-mobile .type-form-oFjwEI {
+  align-items: center;
+  background-color: var(--text);
+  border: 1px solid;
+  border-color: var(--caption--label-text);
+  border-radius: 20px;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  mix-blend-mode: normal;
+  padding: 16px 20px;
+  position: relative;
+  width: 315px;
+}
+
+.artist-page-mobile .enter-your-email-address-LMeD9S {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 22px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-bottom: -3px;
+  margin-top: -5px;
+  min-width: 275px;
+  mix-blend-mode: normal;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-mobile .enter-your-email-address-LMeD9S::placeholder {
+  color: #2b2b2b99;
+}
+
+.artist-page-mobile .button-oFjwEI {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-mobile .button-oFjwEI:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-mobile .icon-mail-RegAkx {
+  background-color: transparent;
+  height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+.artist-page-mobile .button-RegAkx {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-mobile .frame-239-U04feP {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  margin-left: -165px;
+  margin-right: -165px;
+  position: relative;
+  width: 315px;
+}
+
+.artist-page-mobile .divider-ixYLjF {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 315px;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-mobile .nft-market-use-this-template-freely-ixYLjF {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* screen - artist-page-tablet */
+
+.artist-page-tablet {
+  align-items: flex-start;
+  background-color: var(--background);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  left: 0px;
+  margin: 0px;
+  min-height: 3237px;
+  min-width: 834px;
+  mix-blend-mode: normal;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.artist-page-tablet .navigation-BmbKIq {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  mix-blend-mode: normal;
+  padding: 15px 50px;
+  position: relative;
+}
+
+.artist-page-tablet .nav-logo-wThHO0 {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .nav-logo-zb3T1u {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .logo-51xC7g {
+  background-color: transparent;
+  height: 24px;
+  min-width: 182.5603790283203px;
+  position: relative;
+}
+
+.artist-page-tablet .storefront-473jkM {
+  background-color: transparent;
+  height: 24px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-tablet .nft-marketplace-473jkM {
+  background-color: transparent;
+  height: 15px;
+  left: 33px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 6px;
+  width: 150px;
+}
+
+.artist-page-tablet .nav-nav-menu-wThHO0 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  justify-content: flex-end;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .burger-menu-joO8Lz {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.artist-page-tablet .cover-profile-image-BmbKIq {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .image-place-holder-ztgq0h {
+  align-self: stretch;
+  background-color: transparent;
+  height: 280px;
+  min-width: 834px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-tablet .profile-image-ztgq0h {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  margin-top: -70px;
+  position: relative;
+  width: 690px;
+}
+
+.artist-page-tablet .avatar-Icx54f {
+  align-items: flex-start;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  margin-bottom: -2px;
+  margin-left: -2px;
+  margin-top: -2px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-tablet .avatar-Icx54f:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .asset-12-2-cmH3lq {
+  background-color: transparent;
+  height: 120px;
+  min-width: 120px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-placeholder-ZyF5sb {
+  background-color: transparent;
+  height: 120px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 120px;
+}
+
+.artist-page-tablet .artist-info-BmbKIq {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 30px 0px;
+  position: relative;
+}
+
+.artist-page-tablet .frame-264-v9Roqy {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 690px;
+}
+
+.artist-page-tablet .artist-name-czOx2u {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 45.6px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .ct-as-czOx2u {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .button-KYQOkh {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 186px;
+}
+
+.artist-page-tablet .button-KYQOkh:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .icon-copy-kg9RIR {
+  background-color: transparent;
+  height: 20px;
+  margin-left: -29.5px;
+  min-width: 20px;
+  position: relative;
+}
+
+.artist-page-tablet .button-kg9RIR {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-right: -29.5px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .button-xAIeSk {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-tablet .button-xAIeSk:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .plus-ZpBB3N {
+  background-color: transparent;
+  height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+.artist-page-tablet .button-ZpBB3N {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .stats-czOx2u {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: 510px;
+}
+
+.artist-page-tablet .total-sale-uy1on2 {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .x240k-XDXE83 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .total-sale-XDXE83 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .auctions-uy1on2 {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .x100k-Jx9ix2 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .auctions-Jx9ix2 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .artists-uy1on2 {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .x240k-lWU81b {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .artists-lWU81b {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .bio-czOx2u {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .bio-zmkuFR {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .the-internets-friendliest-designer-kid-zmkuFR {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .web-links-czOx2u {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .links-93Qf6Y {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .icons-93Qf6Y {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .icon-globe-0AQf87 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .icon-globe-0AQf87:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .discord-logo-0AQf87 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .discord-logo-0AQf87:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .youtube-logo-0AQf87 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .youtube-logo-0AQf87:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .icon-twitter-0AQf87 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .icon-twitter-0AQf87:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .icon-instagram-0AQf87 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .icon-instagram-0AQf87:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .frame-261-BmbKIq {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-tablet .line-2-qNKeAf {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 834px;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-tablet .frame-247-qNKeAf {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+  width: 680px;
+}
+
+.artist-page-tablet .tabs-nRLixR {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .tab-V92dq9 {
+  align-items: center;
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--caption--label-text);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 30px;
+  position: relative;
+}
+
+.artist-page-tablet .created-I8oCtw {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .frame-81-I8oCtw {
+  align-items: center;
+  background-color: var(--caption--label-text);
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 5px 10px;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .x302-RAiOce {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .tab-YljqJP {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 30px;
+  position: relative;
+}
+
+.artist-page-tablet .created-vvFgaM {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .frame-81-vvFgaM {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 5px 10px;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .x302-6djDxU {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .tab-qXAx6N {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  height: 60px;
+  justify-content: center;
+  padding: 0px 30px;
+  position: relative;
+}
+
+.artist-page-tablet .created-GYktM3 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .frame-81-GYktM3 {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 5px 10px;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .x302-Ix2FfP {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .nft-cards-section-BmbKIq {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 80px 0px;
+  position: relative;
+}
+
+.artist-page-tablet .nft-cards-row-dFEp1E {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 690px;
+}
+
+.artist-page-tablet .nft-card-4Fj5Up {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .nft-card-4Fj5Up:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .image-btbOkC {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .image-placeholder-fh5xnR {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-tablet .nft-info-btbOkC {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-tablet .artst-info-gvTOGj {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .nft-name-7O0wiu {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .artist-avatar-name-7O0wiu {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-VYd8Xx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .asset-12-2-i3AARw {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-placeholder-H3yZwv {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-tablet .nft-artist-VYd8Xx {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .additional-info-gvTOGj {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .price-n8TQy8 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-tablet .price-IX7rT3 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x163-eth-IX7rT3 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .highest-bid-n8TQy8 {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-tablet .highest-bid-Pv1F4s {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x033-w-eth-Pv1F4s {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .nft-card-7FZazG {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .nft-card-7FZazG:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .image-LtVyBA {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .image-placeholder-zMrsWd {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-tablet .nft-info-LtVyBA {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-tablet .artst-info-FaNWXY {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .nft-name-7dksLs {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .artist-avatar-name-7dksLs {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-axgLXp {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .asset-12-2-0SdjYB {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-placeholder-LgU8tn {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-tablet .nft-artist-axgLXp {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .additional-info-FaNWXY {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .price-X08ygt {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-tablet .price-VMaWYY {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x163-eth-VMaWYY {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .highest-bid-X08ygt {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-tablet .highest-bid-DIm4NZ {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x033-w-eth-DIm4NZ {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .nft-cards-row-i7OPxM {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 690px;
+}
+
+.artist-page-tablet .nft-card-b104ww {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .nft-card-b104ww:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .image-6TSnTV {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .image-placeholder-tyybmI {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-tablet .nft-info-6TSnTV {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-tablet .artst-info-Bnmds5 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .nft-name-z3fn1W {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .artist-avatar-name-z3fn1W {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-fMtemy {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .asset-12-2-P50qFb {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-placeholder-X3JIOC {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-tablet .nft-artist-fMtemy {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .additional-info-Bnmds5 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .price-NehRUY {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-tablet .price-E1gMzS {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x163-eth-E1gMzS {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .highest-bid-NehRUY {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-tablet .highest-bid-GWjiZ9 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x033-w-eth-GWjiZ9 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .nft-card-HoTSxy {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .nft-card-HoTSxy:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .image-4HQQ9l {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .image-placeholder-42Cpqr {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-tablet .nft-info-4HQQ9l {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-tablet .artst-info-QcxGmP {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .nft-name-jJ20OB {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .artist-avatar-name-jJ20OB {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-kggsUp {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .asset-12-2-l02h3e {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-placeholder-lRU3yp {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-tablet .nft-artist-kggsUp {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .additional-info-QcxGmP {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .price-VeHwPg {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-tablet .price-dUV0CU {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x163-eth-dUV0CU {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .highest-bid-VeHwPg {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-tablet .highest-bid-w2wF0q {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x033-w-eth-w2wF0q {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .nft-cards-row-oSqJTf {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 690px;
+}
+
+.artist-page-tablet .nft-card-1zetxV {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .nft-card-1zetxV:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .image-J9Bifo {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .image-placeholder-gpBYFG {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-tablet .nft-info-J9Bifo {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-tablet .artst-info-9MrWL8 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .nft-name-wwApUx {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .artist-avatar-name-wwApUx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-YpEaHI {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .asset-12-2-43v41f {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-placeholder-fxDnx0 {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-tablet .nft-artist-YpEaHI {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .additional-info-9MrWL8 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .price-6CIw6r {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-tablet .price-8j9vTD {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x163-eth-8j9vTD {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .highest-bid-6CIw6r {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-tablet .highest-bid-4tV3lA {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x033-w-eth-4tV3lA {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .nft-card-kPM9Iy {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 469px;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artist-page-tablet .nft-card-kPM9Iy:hover {
+  transform: scale(0.95);
+}
+
+.artist-page-tablet .image-xxJG1M {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .image-placeholder-p1bRwU {
+  align-self: stretch;
+  background-color: transparent;
+  height: 295px;
+  min-width: 330px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-tablet .nft-info-xxJG1M {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 20px 30px 25px;
+  position: relative;
+}
+
+.artist-page-tablet .artst-info-ckR9e6 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .nft-name-ysxPpR {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .artist-avatar-name-ysxPpR {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-L5CqfJ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .asset-12-2-z45hBE {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.artist-page-tablet .avatar-placeholder-4dv0Du {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.artist-page-tablet .nft-artist-L5CqfJ {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .additional-info-ckR9e6 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .price-Dl4zFx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  padding: 0px 21px 0px 0px;
+  position: relative;
+}
+
+.artist-page-tablet .price-g3Y29n {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x163-eth-g3Y29n {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .highest-bid-Dl4zFx {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-page-tablet .highest-bid-NnCtJg {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .x033-w-eth-NnCtJg {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .footer-BmbKIq {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border-bottom-style: none;
+  border-color: var(--background);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 195px;
+  position: relative;
+}
+
+.artist-page-tablet .footer-info-LhrYml {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  margin-left: -123px;
+  margin-right: -123px;
+  position: relative;
+  width: 690px;
+}
+
+.artist-page-tablet .nft-marketplace-info-bSBEM3 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .logo-xSWBiK {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.artist-page-tablet .storefront-XT3TN9 {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.artist-page-tablet .nft-marketplace-XT3TN9 {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.artist-page-tablet .additional-info-xSWBiK {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .nft-marketplace-ui-c-BWE3N3 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .community-info-BWE3N3 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .join-our-community-lGIox9 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .icons-lGIox9 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.artist-page-tablet .discord-logo-tp0ehJ {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-tablet .youtube-logo-tp0ehJ {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-tablet .icon-twitter-tp0ehJ {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-tablet .icon-instagram-tp0ehJ {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.artist-page-tablet .explore-bSBEM3 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .explore-3cKexF {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .pages-3cKexF {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .marketplace-VwqGsA {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .rankings-VwqGsA {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .connect-a-wallet-VwqGsA {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .subscribe-bSBEM3 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .join-our-weekly-digest-iuR6W9 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .subscribe-form-info-iuR6W9 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.artist-page-tablet .get-exclusive-promot-xnZJJ5 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .subscribe-form-xnZJJ5 {
+  align-items: center;
+  background-color: var(--text);
+  border-radius: 20px;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 16px 0px 16px 20px;
+  position: relative;
+  width: 420px;
+}
+
+.artist-page-tablet .enter-your-email-here-3MVuNx {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 22px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  min-width: 209px;
+  mix-blend-mode: normal;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.artist-page-tablet .enter-your-email-here-3MVuNx::placeholder {
+  color: #2b2b2b99;
+}
+
+.artist-page-tablet .button-3MVuNx {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: flex-end;
+  margin-bottom: -16px;
+  margin-top: -16px;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.artist-page-tablet .button-3MVuNx:hover {
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+.artist-page-tablet .button-rxUDyE {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.artist-page-tablet .frame-239-LhrYml {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  margin-left: -123px;
+  margin-right: -123px;
+  position: relative;
+  width: 690px;
+}
+
+.artist-page-tablet .divider-JzaWqX {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 690px;
+  object-fit: cover;
+  position: relative;
+}
+
+.artist-page-tablet .nft-market-use-this-template-freely-JzaWqX {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 833px) {
+  .screen.artist-page-desktop {
+    display: none;
+  }
+
+  .screen.artist-page-tablet {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 834px) and (max-width: 1279px) {
+  .screen.artist-page-desktop {
+    display: none;
+  }
+
+  .screen.artist-page-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .screen.artist-page-mobile {
+    display: none;
+  }
+
+  .screen.artist-page-tablet {
+    display: none;
+  }
+}

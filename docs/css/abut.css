@@ -1,0 +1,3541 @@
+@font-face {
+  font-family: "font";
+  src: url("../font/web_Yekan.ttf");
+
+}
+
+body {
+  font-family: 'font';
+}
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical>* {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal>* {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  direction: rtl;
+  font-family: font;
+}
+
+:root {
+  --background: #2b2b2b;
+  --background---secondary: #3b3b3b;
+  --black: #000000;
+  --call-to-action: #a259ff;
+  --caption--label-text: #858584;
+  --celeste: #cccccc;
+  --jade: #00ac4f;
+  --masala: #3b3b3b80;
+  --text: #ffffff;
+  --white: #ffffff1a;
+
+  --font-size-l: 22px;
+  --font-size-m: 16px;
+  --font-size-s: 12px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 38px;
+  --font-size-xxxl: 51px;
+  --font-size-xxxxl: 67px;
+}
+
+.spacemono-normal-white-16px {
+  color: var(--text);
+
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-white-22px {
+  color: var(--text);
+
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.spacemono-normal-gunsmoke-12px {
+  color: var(--caption--label-text);
+
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-celeste-16px {
+  color: var(--celeste);
+
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-white-16px {
+  color: var(--text);
+
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.spacemono-normal-gunsmoke-16px {
+  color: var(--caption--label-text);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-white-16px {
+  color: var(--text);
+
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.spacemono-normal-white-12px {
+  color: var(--text);
+
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.spacemono-bold-white-22px {
+  color: var(--text);
+
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.spacemono-normal-jade-16px {
+  color: var(--jade);
+
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-heavy-metal-16px {
+  color: var(--background);
+
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-gunsmoke-16px {
+  color: var(--caption--label-text);
+
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-normal-celeste-12px {
+  color: var(--celeste);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-white-28px {
+  color: var(--text);
+
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-semi-bold-white-38px {
+  color: var(--text);
+
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.spacemono-bold-white-38px {
+  color: var(--text);
+
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.spacemono-bold-white-28px {
+  color: var(--text);
+
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.worksans-normal-white-22px {
+  color: var(--text);
+
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.worksans-semi-bold-gunsmoke-16px {
+  color: var(--caption--label-text);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-semi-bold-white-51px {
+  color: var(--text);
+
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-semi-bold-gunsmoke-22px {
+  color: var(--caption--label-text);
+
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-normal-white-12px {
+  color: var(--text);
+
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.spacemono-bold-gunsmoke-22px {
+  color: var(--caption--label-text);
+
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.worksans-semi-bold-heavy-metal-16px {
+  color: var(--background);
+
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.worksans-normal-white-24px {
+  color: var(--text);
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* screen - nft-page-desktop */
+
+.nft-page-desktop {
+  align-items: flex-start;
+  background-color: var(--background);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  left: 0px;
+  margin: 0px;
+  min-height: 2240px;
+  min-width: 1280px;
+  mix-blend-mode: normal;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.nft-page-desktop .navigation-n7bCW1 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  mix-blend-mode: normal;
+  padding: 20px 50px;
+  position: relative;
+}
+
+.nft-page-desktop .nav-logo-K4WIrx {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-desktop .logo-DEKTW4 {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.nft-page-desktop .storefront-9Ynezq {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.nft-page-desktop .nft-marketplace-9Ynezq {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.nft-page-desktop .nav-nav-menu-K4WIrx {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  justify-content: flex-end;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-desktop .marketplace-ncLWIC {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  padding: 0px 20px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-desktop .marketplace-ncLWIC:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-desktop .button-sd7lQq {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .rankings-ncLWIC {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  padding: 0px 20px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-desktop .rankings-ncLWIC:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-desktop .button-w9Aivb {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .connect-a-wallet-ncLWIC {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  padding: 0px 20px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-desktop .connect-a-wallet-ncLWIC:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-desktop .button-xBz0xI {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .sign-up-ncLWIC {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-desktop .sign-up-ncLWIC:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-desktop .user-KL43Zz {
+  background-color: transparent;
+  height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+.nft-page-desktop .button-KL43Zz {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .image-place-holder-n7bCW1 {
+  align-self: stretch;
+  background-color: transparent;
+  background-image: url(../cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-7%401x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 560px;
+  min-width: 1280px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.nft-page-desktop .artist-info-n7bCW1 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 0px;
+  position: relative;
+}
+
+.nft-page-desktop .artist-info-section-WP0mXV {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 1050px;
+}
+
+.nft-page-desktop .nft-info-yEdbnr {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 150px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .nft-info-nSO2Yb {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .headline-subhead-tyXj9S {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .artist-name-zBNRWj {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 56.1px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-desktop .minted-on-sep-30-2022-zBNRWj {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--caption--label-text);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-desktop .additional-info-tyXj9S {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .created-by-FxLGtl {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .created-by-J6PeB1 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-desktop .artist-card-J6PeB1 {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nft-page-desktop .artist-card-J6PeB1:hover {
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+.nft-page-desktop .avatar-WJqN0H {
+  align-items: flex-start;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-desktop .avatar-WJqN0H:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-desktop .asset-12-2-iKr89I {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.nft-page-desktop .avatar-placeholder-nV5c0r {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.nft-page-desktop .dish-studio-WJqN0H {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-desktop .description-FxLGtl {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .description-N05o2W {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: 510px;
+}
+
+.nft-page-desktop .the-orbitians-is-a-c-N05o2W {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.nft-page-desktop .details-FxLGtl {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .details-5Ax7JJ {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-desktop .website-link-5Ax7JJ {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .icon-globe-0s4gee {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-desktop .view-on-etherscan-0s4gee {
+  background-color: transparent;
+  cursor: pointer;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-desktop .website-link-CfHyCR {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .icon-globe-O65MUP {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-desktop .view-original-O65MUP {
+  background-color: transparent;
+  cursor: pointer;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-desktop .tags-FxLGtl {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .tags-rCwjBL {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 30.8px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .frame-243-rCwjBL {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-desktop .button-1X4lGx {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-desktop .button-1X4lGx:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-desktop .button-WPgzzn {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .button-54x1M2 {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-desktop .button-54x1M2:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-desktop .button-JTNH0e {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .button-ud0lIP {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-desktop .button-ud0lIP:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-desktop .button-lwVh7E {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .button-0c0Bs1 {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-desktop .button-0c0Bs1:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-desktop .footer-n7bCW1 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border-bottom-style: none;
+  border-color: var(--background);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 195px;
+  position: relative;
+}
+
+.nft-page-desktop .footer-info-xLkBHy {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  margin-left: -79.71px;
+  margin-right: -79.71px;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-desktop .nft-marketplace-info-BAfkGH {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  padding: 0px 84px 0px 0px;
+  position: relative;
+  width: 327.4138488769531px;
+}
+
+.nft-page-desktop .logo-wVBMnm {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.nft-page-desktop .storefront-uZl2Vi {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.nft-page-desktop .nft-marketplace-uZl2Vi {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.nft-page-desktop .additional-info-wVBMnm {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-desktop .nft-marketplace-ui-c-nRwMyx {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: 238px;
+}
+
+.nft-page-desktop .community-info-nRwMyx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-desktop .join-our-community-IrXIxZ {
+  background-color: transparent;
+  height: 18px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.nft-page-desktop .icons-IrXIxZ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-desktop .discord-logo-CAAstU {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-desktop .youtube-logo-CAAstU {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-desktop .icon-twitter-CAAstU {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-desktop .icon-instagram-CAAstU {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-desktop .explore-BAfkGH {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  position: relative;
+  width: 240px;
+}
+
+.nft-page-desktop .explore-Qzrdst {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .pages-Qzrdst {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-desktop .marketplace-m2eCXt {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .rankings-m2eCXt {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .connect-a-wallet-m2eCXt {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .subscribe-BAfkGH {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-desktop .join-our-weekly-digest-Cymatb {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .subscribe-form-info-Cymatb {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-desktop .get-exclusive-promot-9Y9gEl {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: 330px;
+}
+
+.nft-page-desktop .subscribe-form-9Y9gEl {
+  align-items: center;
+  background-color: var(--text);
+  border-radius: 20px;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 16px 0px 16px 20px;
+  position: relative;
+  width: 420px;
+}
+
+.nft-page-desktop .enter-your-email-here-dykcXk {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 22px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  min-width: 209px;
+  mix-blend-mode: normal;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-desktop .enter-your-email-here-dykcXk::placeholder {
+  color: #2b2b2b99;
+}
+
+.nft-page-desktop .button-dykcXk {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: flex-end;
+  margin-bottom: -16px;
+  margin-top: -16px;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-desktop .button-dykcXk:hover {
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+.nft-page-desktop .button-CmgwlJ {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-desktop .frame-239-xLkBHy {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  margin-left: -79.71px;
+  margin-right: -79.71px;
+  position: relative;
+  width: 1049.413818359375px;
+}
+
+.nft-page-desktop .divider-ugXBEh {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 1049.4140625px;
+  object-fit: cover;
+  position: relative;
+}
+
+.nft-page-desktop .nft-market-use-this-template-freely-ugXBEh {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* screen - nft-page-mobile */
+
+.nft-page-mobile {
+  align-items: flex-start;
+  background-color: var(--background);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  left: 0px;
+  margin: 0px;
+  min-height: 2650px;
+  min-width: 375px;
+  mix-blend-mode: normal;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.nft-page-mobile .navigation-XhS5IE {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  mix-blend-mode: normal;
+  padding: 15px 30px;
+  position: relative;
+}
+
+.nft-page-mobile .nav-logo-DB4vgH {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-mobile .nav-logo-cT9K8x {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-mobile .logo-cEbaPv {
+  background-color: transparent;
+  height: 24px;
+  min-width: 182.56039428710938px;
+  position: relative;
+}
+
+.nft-page-mobile .storefront-8fSEGC {
+  background-color: transparent;
+  height: 24px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.nft-page-mobile .nft-marketplace-8fSEGC {
+  background-color: transparent;
+  height: 15px;
+  left: 33px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 6px;
+  width: 150px;
+}
+
+.nft-page-mobile .nav-nav-menu-DB4vgH {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  justify-content: flex-end;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-mobile .burger-menu-6IW0d6 {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.nft-page-mobile .image-place-holder-XhS5IE {
+  align-self: stretch;
+  background-color: transparent;
+  background-image: url(../cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-7%401x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 320px;
+  min-width: 375px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.nft-page-mobile .artist-info-XhS5IE {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 0px;
+  position: relative;
+}
+
+.nft-page-mobile .nft-info-4aIJTA {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+  width: 315px;
+}
+
+.nft-page-mobile .headline-subhead-Ab0RcK {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .artist-name-yL820l {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 39.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .minted-on-sep-30-2022-yL820l {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .auction-timer-cta-Ab0RcK {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 30px;
+  position: relative;
+}
+
+.nft-page-mobile .auction-timer-MvpRad {
+  -webkit-backdrop-filter: blur(10px) brightness(100%);
+  align-items: flex-start;
+  align-self: stretch;
+  backdrop-filter: blur(10px) brightness(100%);
+  background-color: var(--masala);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  justify-content: flex-end;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.nft-page-mobile .auction-ends-in-HCNxZ6 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .timer-HCNxZ6 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .hours-hcwZHh {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .x59-rf4Wwi {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 45.6px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .hours-rf4Wwi {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .x-hcwZHh {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 39.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .minutes-hcwZHh {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .x59-zzaH2F {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 45.6px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .minutes-zzaH2F {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .x-coxCAF {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 39.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .seconds-hcwZHh {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .x59-EX9dzZ {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 45.6px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .seconds-EX9dzZ {
+  align-self: stretch;
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .button-MvpRad {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nft-page-mobile .button-MvpRad:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-mobile .button-NE2Xfb {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .created-by-Ab0RcK {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .created-by-h0go1P {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .artist-card-h0go1P {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .avatar-2aoNPf {
+  align-items: flex-start;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-mobile .avatar-2aoNPf:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-mobile .asset-12-2-Fuzxax {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.nft-page-mobile .avatar-placeholder-pIWcWI {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.nft-page-mobile .dish-studio-2aoNPf {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .description-Ab0RcK {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .description-K66JQC {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .the-orbitians-is-a-c-K66JQC {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.nft-page-mobile .details-Ab0RcK {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .details-hrIvmj {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .website-link-hrIvmj {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .icon-globe-DzOxlY {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.nft-page-mobile .view-on-etherscan-DzOxlY {
+  background-color: transparent;
+  cursor: pointer;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .website-link-DxKTJ3 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .icon-globe-YUW7lX {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.nft-page-mobile .view-original-YUW7lX {
+  background-color: transparent;
+  cursor: pointer;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .tags-Ab0RcK {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .tags-hsnWYx {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .tags-ZKWOMe {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .button-H5cSto {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-mobile .button-H5cSto:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-mobile .button-rONSzv {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .button-db3lDb {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-mobile .button-db3lDb:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-mobile .button-x0Tepu {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .button-9sLP5Q {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-mobile .button-9sLP5Q:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-mobile .button-AK43wb {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .button-zL23Re {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-mobile .button-zL23Re:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-mobile .footer-XhS5IE {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 195px;
+  position: relative;
+}
+
+.nft-page-mobile .footer-info-jejheO {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  margin-left: -165px;
+  margin-right: -165px;
+  position: relative;
+  width: 315px;
+}
+
+.nft-page-mobile .nft-marketplace-info-xjKsGN {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .logo-l5NMcS {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.nft-page-mobile .storefront-ckbx2G {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.nft-page-mobile .nft-marketplace-ckbx2G {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.nft-page-mobile .additional-info-l5NMcS {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .nft-marketplace-ui-c-tPUzQs {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.nft-page-mobile .community-info-tPUzQs {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .join-our-community-pwkqYv {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .icons-pwkqYv {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-mobile .discord-logo-Moawz6 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-mobile .youtube-logo-Moawz6 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-mobile .icon-twitter-Moawz6 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-mobile .icon-instagram-Moawz6 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-mobile .explore-xjKsGN {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .explore-dImAQS {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .pages-dImAQS {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .marketplace-H3pYEE {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .rankings-H3pYEE {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .connect-a-wallet-H3pYEE {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .subscribe-xjKsGN {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .join-our-weekly-digest-COTU20 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .subscribe-form-info-COTU20 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-mobile .get-exclusive-promot-qv6R1K {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.nft-page-mobile .subscribe-widget-mobile-qv6R1K {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-mobile .type-form-eqIgJs {
+  align-items: center;
+  background-color: var(--text);
+  border: 1px solid;
+  border-color: var(--caption--label-text);
+  border-radius: 20px;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  mix-blend-mode: normal;
+  padding: 16px 20px;
+  position: relative;
+  width: 315px;
+}
+
+.nft-page-mobile .enter-your-email-address-7mxxJt {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 22px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-bottom: -3px;
+  margin-top: -5px;
+  min-width: 275px;
+  mix-blend-mode: normal;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-mobile .enter-your-email-address-7mxxJt::placeholder {
+  color: #2b2b2b99;
+}
+
+.nft-page-mobile .button-eqIgJs {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nft-page-mobile .button-eqIgJs:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-mobile .icon-mail-RMdVPP {
+  background-color: transparent;
+  height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+.nft-page-mobile .button-RMdVPP {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-mobile .frame-239-jejheO {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  margin-left: -165px;
+  margin-right: -165px;
+  position: relative;
+  width: 315px;
+}
+
+.nft-page-mobile .divider-5zFI9m {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 315px;
+  object-fit: cover;
+  position: relative;
+}
+
+.nft-page-mobile .nft-market-use-this-template-freely-5zFI9m {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* screen - nft-page-tablet */
+
+.nft-page-tablet {
+  align-items: flex-start;
+  background-color: var(--background);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  left: 0px;
+  margin: 0px;
+  min-height: 2400px;
+  min-width: 834px;
+  mix-blend-mode: normal;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.nft-page-tablet .navigation-i24MmI {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  mix-blend-mode: normal;
+  padding: 15px 50px;
+  position: relative;
+}
+
+.nft-page-tablet .nav-logo-31YVYL {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-tablet .nav-logo-HUiXgZ {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-tablet .logo-h4dKuc {
+  background-color: transparent;
+  height: 24px;
+  min-width: 182.5603790283203px;
+  position: relative;
+}
+
+.nft-page-tablet .storefront-CR6lLU {
+  background-color: transparent;
+  height: 24px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.nft-page-tablet .nft-marketplace-CR6lLU {
+  background-color: transparent;
+  height: 15px;
+  left: 33px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 6px;
+  width: 150px;
+}
+
+.nft-page-tablet .nav-nav-menu-31YVYL {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  justify-content: flex-end;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-tablet .burger-menu-Eov0Xg {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.nft-page-tablet .image-place-holder-i24MmI {
+  align-self: stretch;
+  background-color: transparent;
+  background-image: url(../cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-7%401x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 420px;
+  min-width: 834px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.nft-page-tablet .artist-info-i24MmI {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 0px;
+  position: relative;
+}
+
+.nft-page-tablet .artist-info-section-1reGId {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+  width: 690px;
+}
+
+.nft-page-tablet .nft-info-K5wSJK {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 30px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .nft-info-w7yTjx {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .headline-subhead-26xccx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .artist-name-RqueW7 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 45.6px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .minted-on-sep-30-2022-RqueW7 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .additional-info-26xccx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .created-by-dI8Hlg {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .created-by-ujIT7t {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .artist-card-ujIT7t {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .avatar-7q4p1M {
+  align-items: flex-start;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-tablet .avatar-7q4p1M:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-tablet .asset-12-2-03zagk {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.nft-page-tablet .avatar-placeholder-fEjHTc {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.nft-page-tablet .dish-studio-7q4p1M {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .description-dI8Hlg {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .description-2exvgv {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .the-orbitians-is-a-c-2exvgv {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+}
+
+.nft-page-tablet .details-dI8Hlg {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .details-CwXU10 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .website-link-CwXU10 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .icon-globe-bzvCqk {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.nft-page-tablet .view-on-etherscan-bzvCqk {
+  background-color: transparent;
+  cursor: pointer;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .website-link-5EJrdr {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .icon-globe-y7xgxB {
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.nft-page-tablet .view-original-y7xgxB {
+  background-color: transparent;
+  cursor: pointer;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .tags-dI8Hlg {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .tags-KIw5VB {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-tablet .tags-ZkSX1v {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .button-aUSDN2 {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-tablet .button-aUSDN2:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-tablet .button-BlfiKn {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-tablet .button-HziRt3 {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-tablet .button-HziRt3:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-tablet .button-2pX37V {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-tablet .button-xBvAYl {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-tablet .button-xBvAYl:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-tablet .button-ENKoRF {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-tablet .button-YTlBkv {
+  align-items: center;
+  background-color: var(--background---secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 46px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 0px 30px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-tablet .button-YTlBkv:hover {
+  transform: scale(0.95);
+}
+
+.nft-page-tablet .footer-i24MmI {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--background---secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+  height: auto;
+  mix-blend-mode: normal;
+  padding: 40px 195px;
+  position: relative;
+}
+
+.nft-page-tablet .footer-info-EPpJev {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  margin-left: -123px;
+  margin-right: -123px;
+  position: relative;
+  width: 690px;
+}
+
+.nft-page-tablet .nft-marketplace-info-vibar9 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .logo-JpvYoP {
+  background-color: transparent;
+  height: 32px;
+  min-width: 243.41384887695312px;
+  position: relative;
+}
+
+.nft-page-tablet .storefront-sxgTdC {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.nft-page-tablet .nft-marketplace-sxgTdC {
+  background-color: transparent;
+  height: 20px;
+  left: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.nft-page-tablet .additional-info-JpvYoP {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .nft-marketplace-ui-c-Co3hOz {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .community-info-Co3hOz {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .join-our-community-JwMlBv {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .icons-JwMlBv {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.nft-page-tablet .discord-logo-R4sxqq {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-tablet .youtube-logo-R4sxqq {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-tablet .icon-twitter-R4sxqq {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-tablet .icon-instagram-R4sxqq {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.nft-page-tablet .explore-vibar9 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .explore-ZJ32sT {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .pages-ZJ32sT {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .marketplace-NcvuFI {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-tablet .rankings-NcvuFI {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-tablet .connect-a-wallet-NcvuFI {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-tablet .subscribe-vibar9 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .join-our-weekly-digest-ctZMTW {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 35.2px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .subscribe-form-info-ctZMTW {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nft-page-tablet .get-exclusive-promot-5wa8Ew {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .subscribe-form-5wa8Ew {
+  align-items: center;
+  background-color: var(--text);
+  border-radius: 20px;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  mix-blend-mode: normal;
+  padding: 16px 0px 16px 20px;
+  position: relative;
+  width: 420px;
+}
+
+.nft-page-tablet .enter-your-email-here-cBtYAf {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 22px;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  min-width: 209px;
+  mix-blend-mode: normal;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.nft-page-tablet .enter-your-email-here-cBtYAf::placeholder {
+  color: #2b2b2b99;
+}
+
+.nft-page-tablet .button-cBtYAf {
+  align-items: center;
+  background-color: var(--call-to-action);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 60px;
+  justify-content: flex-end;
+  margin-bottom: -16px;
+  margin-top: -16px;
+  mix-blend-mode: normal;
+  padding: 0px 50px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.nft-page-tablet .button-cBtYAf:hover {
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+.nft-page-tablet .button-XdPLzi {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nft-page-tablet .frame-239-EPpJev {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  margin-left: -123px;
+  margin-right: -123px;
+  position: relative;
+  width: 690px;
+}
+
+.nft-page-tablet .divider-CkbWds {
+  align-self: stretch;
+  background-color: transparent;
+  height: 1px;
+  margin-top: -1px;
+  min-width: 690px;
+  object-fit: cover;
+  position: relative;
+}
+
+.nft-page-tablet .nft-market-use-this-template-freely-CkbWds {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 13.2px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 833px) {
+  .screen.nft-page-desktop {
+    display: none;
+  }
+
+  .screen.nft-page-tablet {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 834px) and (max-width: 1279px) {
+  .screen.nft-page-desktop {
+    display: none;
+  }
+
+  .screen.nft-page-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .screen.nft-page-tablet {
+    display: none;
+  }
+
+  .screen.nft-page-mobile {
+    display: none;
+  }
+}
