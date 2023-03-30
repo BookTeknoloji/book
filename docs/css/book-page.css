@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root {
+    --color-main-purple: #A259FF;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+main {
+    width: 100%;
+    height: fit-content;
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container-desktop {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    direction: ltr;
+    gap: 55px;
+    padding: 20px 20px;
+}
+
+/* section 1 */
+
+.main-1-desktop {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+    gap: 40px;
+}
+
+.main-1-desktop-top {
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.forum-book-name {
+    font-size: 28px;
+    color: white;
+}
+
+.forum-book-text {
+    font-size: 18px;
+    color: white;
+}
+
+.main-1-desktop-mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.book-page--chat-box {
+    width: 315px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3B3B3B;
+    border-radius: 20px;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.book-page--chat-box:hover {
+    transform: scale(0.95);
+}
+
+.book-page--chat-box-back {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.book-page--chat-box-name {
+    color: white;
+    font-size: 22px;
+}
+
+.book-page--chat-box-num {
+    color: white;
+    font-size: 16px;
+}
+
+.book-page--chat-box-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.go-to-chat-list p {
+    color: white;
+    font-size: 24px;
+    width: 315px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid #A259FF;
+    display: grid;
+    place-items: center;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.go-to-chat-list p:hover {
+    background-color: #A259FF;
+    transform: scale(0.95);
+}
+
+/* section 2 */
+
+.main-2-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    direction: rtl;
+    gap: 50px;
+}
+
+.main-2-desktop-top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-2-desktop-top>h2 {
+    color: white;
+    font-size: 28px;
+}
+
+.about-book {
+    color: white;
+    font-size: 18px;
+    width: 40vw;
+    max-width: 100%;
+}
+
+/*  */
+
+.main-2-desktop-mid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.khandeaam {
+    width: 180px;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid green;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.khandeaam:hover {
+    transform: scale(0.95);
+    background-color: rgba(0, 128, 0, 0.479);
+}
+
+.khaham {
+    width: 180px;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.khaham:hover {
+    transform: scale(0.95);
+    background-color: rgba(255, 255, 0, 0.459);
+}
+
+.nakhande {
+    width: 180px;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid orange;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.nakhande:hover {
+    transform: scale(0.95);
+    background-color: rgba(255, 166, 0, 0.479);
+}
+
+.like-dis-book-back {
+    display: flex;
+    margin-top: 20px;
+    gap: 50px;
+}
+
+.like-book {
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.like-book i {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.like-book i:hover {
+    transform: scale(1.1);
+}
+
+.dislike-book {
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.dislike-book i {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.dislike-book i:hover {
+    transform: scale(0.9);
+}
+
+/*  */
+
+.main-2-desktop-bottom {
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-2-desktop-bottom>h3 {
+    font-size: 20px;
+    color: white;
+}
+
+.add-comment-form {
+    border: 1px solid var(--color-main-purple);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-comment-prof {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.add-comment-form-input-text {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid var(--color-main-purple);
+    height: 80px;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.add-comment-form-input-submit {
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+    color: white;
+    border: 1px solid var(--color-main-purple);
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.add-comment-form-input-submit:hover {
+    transform: scale(1.1);
+    font-size: 16px;
+}
+
+.comment {
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.comment-prof {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.comment-text {
+    color: white;
+    font-size: 16px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.like-dis-comment {
+    display: flex;
+    gap: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    border-top: 1px solid gray;
+}
+
+.like-comment {
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.like-comment i {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.like-comment i:hover {
+    transform: scale(1.1);
+}
+
+.dislike-comment {
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.dislike-comment i {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.dislike-comment i:hover {
+    transform: scale(0.9);
+}
+
+.more-comment {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-main-purple);
+    font-size: 20px;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.more-comment:hover {
+    transform: scale(1.1);
+}
+
+/* section 3 */
+
+.main-3-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-name {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.book-writer {
+    font-size: 1rem;
+    color: white;
+}
+
+.book-rate {
+    display: flex;
+    gap: 5px;
+}
+
+.book-rat3-num {
+    color: white;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1350px) {
+    .main-container-tablet {
+        width: 100%;
+    }
+
+    .main-3-desktop,
+    .main-1-desktop {
+        width: 25%;
+    }
+
+    .main-2-desktop {
+        width: 40%;
+    }
+
+    .main-1-desktop-bottom,
+    .main-1-desktop-mid,
+    .main-1-desktop-top,
+    .book-page--chat-box,
+    .go-to-chat-list p,
+    .main-3-desktop img {
+        width: 100%;
+    }
+
+    .main-container-tablet {
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
+        gap: 55px;
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .main-2-desktop,
+    .main-3-desktop,
+    .main-1-desktop {
+        width: 100%;
+    }
+
+    .main-2-desktop {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .about-book {
+        margin-right: 20%;
+    }
+
+    .main-2-desktop-mid {
+        margin-right: 30%;
+    }
+
+    .main-container-mobile {
+        width: 70%;
+    }
+
+    .main-container-mobile {
+        display: grid;
+        grid-template-areas:
+            "am"
+            "bm"
+            "cm"
+        ;
+    }
+
+    .main-1-desktop {
+        grid-area: cm;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .main-2-desktop {
+        grid-area: bm;
+    }
+
+    .main-3-desktop {
+        grid-area: am;
+        margin-top: 60px;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .about-book {
+        font-size: 16px;
+        margin-right: 0%;
+        width: auto;
+    }
+
+    .main-2-desktop-mid {
+        margin-right: 0%;
+    }
+
+    .main-container-mobile {
+        justify-content: space-between;
+        gap: 55px;
+        width: 80%;
+    }
+
+    .nakhande,
+    .khaham,
+    .khandeaam {
+        width: 100%;
+    }
+
+    .like-dis-book-back {
+        margin-right: 25%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .create-account-mobile .footer-kVth4Q {
+        padding: 40px 19px;
+    }
+
+
+}
